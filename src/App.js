@@ -10,8 +10,8 @@ function App() {
   function handleClick(event){
     if(out !== 0){
       setOne(out)
-      setTwo(event.target.value);
-      setOut(0)
+      setTwo(parseInt(event.target.value));
+      res=0;
     }
     if(one === 0){
       setOne(parseInt(event.target.value))
@@ -60,54 +60,54 @@ function App() {
         <div className='res'>{out}</div>
         </div>
         <div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second" >
             <button type="submit" value="1" onClick={handleClick}>1</button></div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second" >
           <button type="submit" value="2" onClick={handleClick}>2</button>
           </div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second" >
           <button type="submit" value="3" onClick={handleClick}>3</button></div> 
-          <div className='second'>
-              <button onClick={handleDisplay}>=</button>
+          <div className='second' >
+              <button onClick={handleDisplay} style={{backgroundColor:"orange"}}>=</button>
           </div>
         </div>
         <div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second">
           <button type="submit" value="4" onClick={handleClick}>4</button>
           </div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second">
           <button type="submit" value="5" onClick={handleClick}>5</button>
           </div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second" >
           <button type="submit" value="6" onClick={handleClick}>6</button></div> 
           <div className='second'>
-              <button onClick={addition}>+</button>
+              <button onClick={addition} style={{backgroundColor:"orange"}}>+</button>
           </div>
         </div>
         <div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second" >
           <button type="submit" value="7" onClick={handleClick}>7</button>
           </div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second" >
           <button type="submit" value="8" onClick={handleClick}>8</button>
           </div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second" >
           <button type="submit" value="9" onClick={handleClick}>9</button></div> 
           <div className='second'>
-              <button style={{"border": "1px solid black"}} onClick={subtraction}>-</button>
+              <button style={{backgroundColor:"orange"}} onClick={subtraction}>-</button>
           </div>
         </div>
         <div>
         <div className='second'>
-              <button style={{"border": "1px solid black"}} onClick={multiply}>*</button>
+              <button style={{backgroundColor:"orange"}} onClick={multiply}>*</button>
           </div>
-          <div className="second" style={{"border": "1px solid black"}}>
+          <div className="second">
           <button type="submit" value="0" onClick={handleClick}>0</button></div>
           <div className='second'>
-              <button style={{"border": "1px solid black"}} onClick={divide}>/</button>
+              <button style={{backgroundColor:"orange"}} onClick={divide}>/</button>
           </div>
-          <div className="second" style={{"border": "1px solid black"}}>
-          <button type="submit"  onClick={handleReset}>C</button>
+          <div className="second">
+          <button type="submit"  onClick={handleReset} style={{backgroundColor:"orange"}}>C</button>
           </div>
         </div>
       </div>
