@@ -8,15 +8,16 @@ function App() {
   var res = 0;
 
   function handleClick(event){
+    if(out !== 0){
+      setOne(out)
+      setTwo(event.target.value);
+      setOut(0)
+    }
     if(one === 0){
-        setOne(parseInt(event.target.value))
+      setOne(parseInt(event.target.value))
     }
     else if(two === 0){
       setTwo(parseInt(event.target.value))
-    }
-    else if(out !== 0){
-      setOne(res);
-      setTwo(0);
     }
   }
 
